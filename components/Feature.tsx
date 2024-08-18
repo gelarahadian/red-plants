@@ -25,12 +25,17 @@ const Feature = () => {
   return (
     <section>
       <h3
+        data-aos="fade-right"
         className={`text-4xl text-center my-48 max-w-3xl mx-auto ${playPairDisplay.className} `}
       >
         Love and work are to people what water and sunshine are to plants
       </h3>
       <div className="flex">
-        <div className="w-1/4">
+        <div
+          data-aos="fade-left"
+          data-aos-delay={`${plants.length * 100}`}
+          className="w-1/4"
+        >
           <h3 className={`text-4xl mb-4 ${playPairDisplay.className}`}>
             Featured
           </h3>
@@ -45,8 +50,12 @@ const Feature = () => {
         </div>
         <div className="w-3/4">
           <ul className="flex flex-wrap justify-between">
-            {plants.map((plant) => (
-              <li key={plant.name}>
+            {plants.map((plant, i) => (
+              <li
+                key={plant.name}
+                data-aos="fade-up"
+                data-aos-delay={`${100 * i}`}
+              >
                 <Image
                   src={plant.img}
                   alt={plant.name}

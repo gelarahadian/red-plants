@@ -11,7 +11,11 @@ const Hero = () => {
       style={{ height: "calc(100vh - 80px)" }}
     >
       <div className="flex justify-between items-center w-full">
-        <div className="space-y-12 w-1/2">
+        <div
+          data-aos="fade-left"
+          data-aos-delay="300"
+          className="space-y-12 w-1/2"
+        >
           <h2 className={`text-6xl ${playPairDisplay.className}`}>
             Find perfect plants for your home
           </h2>
@@ -20,7 +24,11 @@ const Hero = () => {
           </p>
           <button className="px-16 h-16 bg-black text-white">Buy Now</button>
         </div>
-        <div className="w-1/2">
+        <div
+          data-aos="zoom-in"
+          data-aos-anchor-placement="bottom-bottom"
+          className="w-1/2"
+        >
           <Image
             src={"/img/hero.png"}
             alt="Hero"

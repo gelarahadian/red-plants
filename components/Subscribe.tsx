@@ -7,12 +7,17 @@ const Subscribe = () => {
   return (
     <section>
       <h3
+        data-aos="fade-right"
         className={`text-2xl mb-5 mt-28 text-center mx-auto w-96 ${playPairDisplay.className} `}
       >
         Get 15% off your next order, Subscribe to our Newsletter
       </h3>
       <form action="">
-        <div className="flex w-[560px] mx-auto">
+        <div
+          data-aos="fade-left"
+          data-aos-delay="300"
+          className="flex w-[560px] mx-auto"
+        >
           <input
             type="email"
             placeholder="Enter your email here"

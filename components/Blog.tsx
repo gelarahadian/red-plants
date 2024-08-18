@@ -23,8 +23,12 @@ const Blog = () => {
   return (
     <section>
       <ul className="flex justify-between space-x-8 mt-36">
-        {blogs.map((blog) => (
-          <li key={blog.title}>
+        {blogs.map((blog, i) => (
+          <li
+            key={blog.title}
+            data-aos="fade-left"
+            data-aos-delay={`${100 * i}`}
+          >
             <div className="relative w-full h-80">
               <Image
                 src={blog.img}

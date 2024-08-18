@@ -24,13 +24,18 @@ const Category = () => {
   return (
     <section>
       <h3
+        data-aos="fade-right"
         className={`text-4xl text-center mb-16 ${playPairDisplay.className} `}
       >
         Categories
       </h3>
       <ul className="flex flex-wrap justify-between">
-        {categories.map((category) => (
-          <li key={category.title}>
+        {categories.map((category, i) => (
+          <li
+            key={category.title}
+            data-aos="fade-up"
+            data-aos-delay={`${100 * i}`}
+          >
             <a href="#">
               <Image
                 src={category.img}
