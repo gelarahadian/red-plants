@@ -36,17 +36,15 @@ const Category = () => {
             data-aos="fade-up"
             data-aos-delay={`${100 * i}`}
           >
-            <a href="#">
-              <Image
-                src={category.img}
-                alt={category.title}
-                width={260}
-                height={400}
-              />
-              <p className={`mt-5 text-2xl ${playPairDisplay.className}`}>
-                {category.title}
-              </p>
-            </a>
+            <Image
+              src={category.img}
+              alt={category.title}
+              width={260}
+              height={400}
+            />
+            <p className={`mt-5 text-2xl ${playPairDisplay.className}`}>
+              {category.title}
+            </p>
           </li>
         ))}
       </ul>

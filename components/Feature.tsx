@@ -1,5 +1,6 @@
 import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const playPairDisplay = Playfair_Display({ subsets: ["latin"] });
@@ -10,16 +11,19 @@ const Feature = () => {
       name: "Plant 1",
       price: 70,
       img: "/img/plant-1.png",
+      sold: false,
     },
     {
       name: "Plant 2",
       price: 80,
       img: "/img/plant-2.png",
+      sold: false,
     },
     {
       name: "Plant 3",
       price: 90,
       img: "/img/plant-3.png",
+      sold: true,
     },
   ];
   return (
@@ -56,12 +60,21 @@ const Feature = () => {
                 data-aos="fade-up"
                 data-aos-delay={`${100 * i}`}
               >
-                <Image
-                  src={plant.img}
-                  alt={plant.name}
-                  width={260}
-                  height={300}
-                />
+                <Link href={"/plant"}>
+                  <div className="relative">
+                    <Image
+                      src={plant.img}
+                      alt={plant.name}
+                      width={260}
+                      height={300}
+                    />
+                    {plant.sold && (
+                      <div className="absolute top-4 right-4 bg-black py-1 px-4 text-white">
+                        Sold Out
+                      </div>
+                    )}
+                  </div>
+                </Link>
                 <h5>{plant.name}</h5>
                 <p>${plant.price}</p>
               </li>

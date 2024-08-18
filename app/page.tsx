@@ -8,7 +8,9 @@ import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-    AOS.init({});
+    AOS.init({
+      duration: 1000,
+    });
   }, []);
   return (
     <main className="max-w-6xl mx-auto px-4">
