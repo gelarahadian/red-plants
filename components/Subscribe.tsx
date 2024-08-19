@@ -1,14 +1,18 @@
 import { Playfair_Display } from "next/font/google";
-import React from "react";
+import React, { FC } from "react";
 
 const playPairDisplay = Playfair_Display({ subsets: ["latin"] });
 
-const Subscribe = () => {
+interface SubscribeProps {
+  className?: string;
+}
+
+const Subscribe: FC<SubscribeProps> = ({ className }) => {
   return (
-    <section>
+    <section className={className}>
       <h3
         data-aos="fade-right"
-        className={`text-2xl mb-5 mt-28 text-center mx-auto w-96 ${playPairDisplay.className} `}
+        className={`text-2xl mb-5 text-center mx-auto w-96 ${playPairDisplay.className} `}
       >
         Get 15% off your next order, Subscribe to our Newsletter
       </h3>

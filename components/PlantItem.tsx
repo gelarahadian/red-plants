@@ -1,7 +1,11 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import Modal from "./Modal";
+import Subscribe from "./Subscribe";
 
 const PlantItem = () => {
+  const [modalOpen, setModalOpen] = React.useState(false);
   return (
     <section>
       <div className="flex">
@@ -51,11 +55,17 @@ const PlantItem = () => {
               <button>-</button>1<button>+</button>
             </div>
           </div>
-          <button className="w-full bg-black h-12 text-white mt-8 ">
+          <button
+            onClick={() => setModalOpen(true)}
+            className="w-full bg-black h-12 text-white mt-8 "
+          >
             ADD TO CART
           </button>
         </div>
       </div>
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+        <Subscribe />
+      </Modal>
     </section>
   );
 };
