@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-x-hidden `}>
         <Header />
         {children}
         <Subscribe className="mt-28 px-4" />

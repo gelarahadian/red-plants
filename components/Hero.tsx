@@ -36,7 +36,7 @@ const Hero = () => {
             alt="Hero"
             width={500}
             height={700}
-            className="ml-auto"
+            className="mx-auto sm:ml-auto"
           />
         </div>
       </div>
