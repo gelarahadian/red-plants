@@ -8,8 +8,8 @@ const PlantItem = () => {
   const [modalOpen, setModalOpen] = React.useState(false);
   return (
     <section>
-      <div className="flex">
-        <div data-aos="fade-up" className="w-1/2 z-10">
+      <div className="flex flex-col sm:flex-row">
+        <div data-aos="fade-up" className="w-full sm:w-1/2 z-10">
           <div className="flex">
             <div className="w-1/5 flex flex-col justify-between">
               <Image
@@ -45,11 +45,15 @@ const PlantItem = () => {
             </div>
           </div>
         </div>
-        <div data-aos="fade-left" data-aos-delay="300" className="w-1/2 pl-10">
+        <div
+          data-aos="fade-left"
+          data-aos-delay="300"
+          className="w-full sm:w-1/2 pl-0 sm:pl-10"
+        >
           <span className="px-4 py-1 bg-black text-white">Sold Out</span>
-          <h2 className="text-4xl mt-28">Plant 3</h2>
-          <h2 className="text-5xl mt-4">$90</h2>
-          <div className="flex items-center mt-16">
+          <h2 className="text-2xl sm:text-4xl mt-4 sm:mt-28">Plant 3</h2>
+          <h2 className="text-3xl sm:text-5xl mt-4">$90</h2>
+          <div className="flex items-center mt-4 sm:mt-16">
             <p className="flex-1">Quantity:</p>
             <div className="w-3/4 flex justify-between p-4 border border-black ">
               <button>-</button>1<button>+</button>

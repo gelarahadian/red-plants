@@ -27,7 +27,7 @@ const Subscribe: FC<SubscribeProps> = ({ className }) => {
             placeholder="Enter your email here"
             className={`bg-gray-100 w-full sm:w-4/6 h-10 pl-4 placeholder:text-gray-700  ${playPairDisplay.className} `}
           />
-          <button className="w-full wsm:w-2/6 bg-black text-white h-10 uppercase px-8">
+          <button className="w-full sm:w-2/6 bg-black text-white h-10 uppercase px-8">
             Subcribe
           </button>
         </div>
