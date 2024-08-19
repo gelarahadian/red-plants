@@ -27,13 +27,23 @@ const Footer = () => {
           </h3>
         </div>
         <div className="w-3/5">
-          <div className="flex justify-around">
+          <div className="flex flex-col sm:flex-row text-center sm:text-left space-y-8 sm:space-y-0  justify-around">
             {links.map((link) => (
               <div key={link.title}>
-                <h4 className="text-xs text-gray-400 mb-5">{link.title}</h4>
+                <h4
+                  data-aos="fade-right"
+                  className="text-xs text-gray-400 mb-5"
+                >
+                  {link.title}
+                </h4>
                 <ul>
-                  {link.lists.map((list) => (
-                    <li key={list} className={`${playPairDisplay.className}`}>
+                  {link.lists.map((list, i) => (
+                    <li
+                      data-aos="fade-left"
+                      data-aos-delay={(i + 1) * 100}
+                      key={list}
+                      className={`${playPairDisplay.className}`}
+                    >
                       {list}
                     </li>
                   ))}

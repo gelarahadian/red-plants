@@ -14,13 +14,13 @@ const Header = () => {
           </h3>
         </Link>
         <nav>
-          <ul className="flex space-x-4">
+          <ul className=" hidden sm:flex space-x-4">
             <li>Home</li>
             <li>Catalogue</li>
             <li>Contacts</li>
           </ul>
         </nav>
-        <div className="flex space-x-4">
+        <div className="hidden sm:flex space-x-4">
           <p>Search</p>
           <p>Card(0)</p>
         </div>

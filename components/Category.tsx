@@ -25,11 +25,11 @@ const Category = () => {
     <section>
       <h3
         data-aos="fade-right"
-        className={`text-4xl text-center mb-16 ${playPairDisplay.className} `}
+        className={`text-4xl text-center mb-16 sm:mt-0 mt-20  ${playPairDisplay.className} `}
       >
         Categories
       </h3>
-      <ul className="flex flex-wrap justify-between">
+      <ul className="flex flex-wrap justify-center xl:justify-between gap-12 xl:gap-0">
         {categories.map((category, i) => (
           <li
             key={category.title}

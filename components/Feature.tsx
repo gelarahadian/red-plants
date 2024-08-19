@@ -34,26 +34,26 @@ const Feature = () => {
       >
         Love and work are to people what water and sunshine are to plants
       </h3>
-      <div className="flex">
+      <div className="flex flex-col xl:flex-row  ">
         <div
           data-aos="fade-left"
           data-aos-delay={`${plants.length * 100}`}
-          className="w-1/4"
+          className="w-full xl:w-1/4 text-center xl:text-left"
         >
           <h3 className={`text-4xl mb-4 ${playPairDisplay.className}`}>
             Featured
           </h3>
-          <p className="text-sm mb-4 w-3/4">
+          <p className="text-sm mb-4 xl:w-3/4">
             Our plants are 100% organic, we don't use pesticides or harmful
             chemicals.{" "}
           </p>
           <p className="text-sm mb-8">But please don't eat them</p>
-          <button className="p-2 border-b border-black">
+          <button className="p-2 border-b border-black mb-8">
             Shop all Favourites
           </button>
         </div>
-        <div className="w-3/4">
-          <ul className="flex flex-wrap justify-between">
+        <div className="w-full xl:w-3/4">
+          <ul className="flex flex-wrap justify-center xl:justify-between gap-8 xl:gap-0  ">
             {plants.map((plant, i) => (
               <li
                 key={plant.name}

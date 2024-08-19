@@ -22,7 +22,7 @@ const Blog = () => {
   ];
   return (
     <section>
-      <ul className="flex justify-between space-x-8 mt-36">
+      <ul className="flex sm:flex-row flex-col justify-between space-x-0 sm:space-x-8 space-y-8 sm:space-y-0 mt-36">
         {blogs.map((blog, i) => (
           <li
             key={blog.title}

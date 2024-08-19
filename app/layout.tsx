@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
-        <Subscribe className="mt-28" />
+        <Subscribe className="mt-28 px-4" />
         <Footer />
       </body>
     </html>
